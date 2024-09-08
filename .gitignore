@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.python-version
+
+# Flask
+instance/
+.flaskenv
+*.db
+*.sqlite
+*.pyc
+*.pyo
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Misc
+.DS_Store
