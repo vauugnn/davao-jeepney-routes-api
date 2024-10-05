@@ -1,9 +1,10 @@
+import os
 import random
 import requests
 import re
 import bs4
 
-__all__ = ["get_request", "RouteException", "get_route_coords"]
+__all__ = ["get_request", "RouteException", "get_route_coords", "get_db_path"]
 
 user_agents = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
@@ -65,3 +66,12 @@ def get_route_coords(url: str) -> list[tuple[str, ...]]:
         raise Exception(res)
 
     return []
+
+
+def get_db_path(db_file: str):
+    dir = os.path.join("instance")
+
+    if not os.path.exists(dir):
+        os.makedirs(dir)
+
+    return os.path.join(dir, db_file)
