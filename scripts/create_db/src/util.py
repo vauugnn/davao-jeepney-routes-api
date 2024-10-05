@@ -34,7 +34,6 @@ def get_route_coords(url: str) -> list[tuple[str, ...]]:
             if len(iframe_all := entry_content.find_all_next("iframe")) > 0:
                 iframe_index = 0
 
-                #
                 if len(iframe_all) > 1:
                     while not (
                         iframe_all[iframe_index]
