@@ -4,7 +4,7 @@ from functools import reduce
 from src.util import *
 
 
-# PLEASE run `python scripts/create_db` from the root directory.
+# PLEASE run `python __main__.py` from the `create_db` folder WITH the virtual environment active.
 with sqlite3.connect(get_db_path("routes.sqlite")) as conn:
     cursor = conn.cursor()
 

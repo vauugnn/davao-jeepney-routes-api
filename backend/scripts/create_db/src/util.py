@@ -68,7 +68,7 @@ def get_route_coords(url: str) -> list[tuple[str, ...]]:
 
 
 def get_db_path(db_file: str):
-    dir = os.path.join("instance")
+    dir = os.path.join("..", "..", "instance")
 
     if not os.path.exists(dir):
         os.makedirs(dir)
